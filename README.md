@@ -1,6 +1,6 @@
-# pocketful-factory
+# DaBros
 
-A three-seat software factory for the WeAreDevelopers x BAND Dark Factory hackathon, pocketful track. A human pastes one task into a BAND room. Three coding-agent seats plan the work, build it, and check it independently, with no further human input. The factory is the mandates in `mandates/`. The product it built is in `stage-1/`.
+DaBros' three-seat software factory for the WeAreDevelopers x BAND Dark Factory hackathon. A human pastes one task into a BAND room. Three coding-agent seats plan the work, build it, and check it independently, with no further human input. The factory is the mandates in `mandates/`. The product it built, a wallet and payments service for the pocketful track, is in `stage-1/`.
 
 ## The seats
 
