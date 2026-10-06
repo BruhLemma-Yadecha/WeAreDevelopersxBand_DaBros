@@ -1,0 +1,4 @@
+__pycache__/
+verify/__pycache__/
+*.pyc
+pocketful.json

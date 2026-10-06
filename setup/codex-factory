@@ -1,0 +1,11 @@
+#!/bin/sh
+P=$PROJECT
+for a; do shift; [ "$a" = acp ] || set -- "$@" "$a"; done
+exec podman run --rm -i --init --userns=keep-id --security-opt label=disable \
+  -e HOME=$HOME -e CODEX_HOME=$HOME/.codex-factory \
+  -w "$P" -v "$P:$P" -v "$P/mandates:$P/mandates:ro" -v "$P/submission/mandates:$P/submission/mandates:ro" -v "$P/NOTES.md:$P/NOTES.md:ro" \
+  -v $HOME/.codex/packages/standalone:$HOME/.codex/packages/standalone:ro \
+  -v /usr/bin/jam:/usr/bin/jam:ro \
+  -v $HOME/.codex-factory:$HOME/.codex-factory \
+  -v $HOME/.jam/jam.sock:$HOME/.jam/jam.sock \
+  factory-seat $HOME/.codex/packages/standalone/current/bin/codex "$@"
